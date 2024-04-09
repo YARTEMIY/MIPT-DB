@@ -1,9 +1,9 @@
-INSERT INTO public."Airline"(
-	"OFFICE_ID", "OFFICE_COUNTRY", "OFFICE_CITY", "OFFICE_STREET", "OFFICE_HOUSE", "PHONE_NUMBER")
+INSERTINSERT INTO public.Airline(
+	OFFICE_ID, OFFICE_COUNTRY, OFFICE_CITY, OFFICE_STREET, OFFICE_HOUSE, PHONE_NUMBER)
 	VALUES (1, 'Russia', 'Perm', 'Lenina', '89', '88005553535');
 
 
-INSERT INTO public."Airport" ("AIRPORT_NAME", "AIRPORT_CITY", "AIRPORT_COUNTRY", "NUMBER_OF_RUNWAYS", "AIRPORT_CAPACITY", "AIRPORT_TYPE", "WORKING_HOURS") 
+INSERT INTO public.Airport (AIRPORT_NAME, AIRPORT_CITY, AIRPORT_COUNTRY, NUMBER_OF_RUNWAYS, AIRPORT_CAPACITY, AIRPORT_TYPE, WORKING_HOURS) 
 VALUES ('Sheremetyevo International Airport', 'Moscow', 'Russia', 2, 40000, 'International', '24 hours'),
        ('Pulkovo Airport', 'Saint Petersburg', 'Russia', 2, 17000, 'International', '24 hours'),
        ('Domodedovo International Airport', 'Moscow', 'Russia', 3, 38000, 'International', '24 hours'),
@@ -36,7 +36,7 @@ VALUES ('Sheremetyevo International Airport', 'Moscow', 'Russia', 2, 40000, 'Int
        ('Surgut International Airport', 'Surgut', 'Russia', 2, 2800, 'International', '24 hours');
 
 
-INSERT INTO public."Airplane" ("OFFICE_ID", "AIRPLANE_TYPE", "AIRPLANE_CAPACITY", "YEAR_OF_ISSUE", "LAST_MAINTENANCE_DATE", "AIRPLANE_STATUS", "AIRPLANE_MILEAGE") 
+INSERT INTO public.Airplane (OFFICE_ID, AIRPLANE_TYPE, AIRPLANE_CAPACITY, YEAR_OF_ISSUE, LAST_MAINTENANCE_DATE, AIRPLANE_STATUS, AIRPLANE_MILEAGE) 
 VALUES (1, 'Boeing 737', 200, 2000, '2022-01-01', 'Active', 50000),
        (1, 'Airbus A320', 180, 2005, '2022-02-01', 'Active', 60000),
        (1, 'Boeing 747', 400, 1995, '2022-03-01', 'Maintenance', 70000),
@@ -69,7 +69,7 @@ VALUES (1, 'Boeing 737', 200, 2000, '2022-01-01', 'Active', 50000),
        (1, 'Boeing 717', 134, 2005, '2024-06-01', 'Active', 340000);
 
 
-INSERT INTO public."Employee" ("OFFICE_ID", "CREW_FIRSTN", "CREW_LASTN", "CREW_FATHERN", "BIRTH_DT", "CREW_POSITION", "WORK_EXPERIENCE", "MEDICAL_EXAMINATION_DATE", "CREW_STATUS")
+INSERT INTO public.Employee (OFFICE_ID, CREW_FIRSTN, CREW_LASTN, CREW_FATHERN, BIRTH_DT, CREW_POSITION, WORK_EXPERIENCE, MEDICAL_EXAMINATION_DATE, CREW_STATUS)
 VALUES (1, 'Ivan', 'Ivanov', 'Ivanovich', '1980-01-01', 'Pilot', 15, '2022-01-01', 'Active'),
        (2, 'Petr', 'Petrov', 'Petrovich', '1981-02-02', 'Steward', 14, '2022-02-02', 'Active'),
        (3, 'Sidor', 'Sidorov', 'Sidorovich', '1982-03-03', 'Pilot', 13, '2022-03-03', 'Active'),
@@ -102,7 +102,7 @@ VALUES (1, 'Ivan', 'Ivanov', 'Ivanovich', '1980-01-01', 'Pilot', 15, '2022-01-01
        (30, 'Timofey', 'Timofeev', 'Timofeevich', '200-06-30', 'Steward', 1, '2024-06-30', 'Active');
 
 
-INSERT INTO public."Passenger" ("PASSENGER_FIRSTN", "PASSENGER_LASTN", "PASSENGER_FATHERN", "BIRTH_DT", "PASSPORT_SERIES", "PASSPORT_NUMBER", "PASSENGER_CATEGORY") 
+INSERT INTO public.Passenger (PASSENGER_FIRSTN, PASSENGER_LASTN, PASSENGER_FATHERN, BIRTH_DT, PASSPORT_SERIES, PASSPORT_NUMBER, PASSENGER_CATEGORY) 
 VALUES ('Ivan', 'Ivanov', 'Ivanovich', '1980-01-01', 4000, 123456, 'Adult'),
        ('Petr', 'Ivanov', 'Petrovich', '1981-02-02', 4001, 123457, 'Adult'),
        ('Sidor', 'Petrov', 'Sidorovich', '1982-03-03', 4002, 123458, 'Adult'),
@@ -134,7 +134,7 @@ VALUES ('Ivan', 'Ivanov', 'Ivanovich', '1980-01-01', 4000, 123456, 'Adult'),
        ('Yaroslav', 'Sidorov', 'Yaroslavovich', '2008-05-29', 4028, 123484, 'Adult'),
        ('Timofey', 'Antonov', 'Timofeevich', '2009-06-30', 4029, 123485, 'Adult');
 
-INSERT INTO public."Loyalty_card" ("PASSENGER_ID", "LOYALTY_LEVEL", "LOYALTY_POINTS", "CARD_STATUS") 
+INSERT INTO public.Loyalty_card (PASSENGER_ID, LOYALTY_LEVEL, LOYALTY_POINTS, CARD_STATUS) 
 VALUES (1, 'Silver', 1000, 'Active'),
        (2, 'Silver', 2000, 'Active'),
        (3, 'Silver', 3000, 'Active'),
@@ -167,8 +167,8 @@ VALUES (1, 'Silver', 1000, 'Active'),
        (30, 'Platinum', 30000, 'Inactive');
 
 
-INSERT INTO public."Flight" ("OFFICE_ID", "AIRPLANE_ID", "DEPARTURE_AIRPORT", "ARRIVAL_AIRPORT", "DEPARTURE_DTTM", "ARRIVAL_DTTM", "TRAVEL_TIME", "FLIGHT_STATUS", 
-                            "VALID_FROM_DTTM", "VALID_TO_DTTM")
+INSERT INTO public.Flight (OFFICE_ID, AIRPLANE_ID, DEPARTURE_AIRPORT, ARRIVAL_AIRPORT, DEPARTURE_DTTM, ARRIVAL_DTTM, TRAVEL_TIME, FLIGHT_STATUS, 
+                            VALID_FROM_DTTM, VALID_TO_DTTM)
 VALUES (1, 1, 1, 2, '2024-01-01 10:00:00', '2024-01-01 12:00:00', 2, 'Scheduled', '2024-01-01 00:00:00', '5999-01-01 00:00:00'),
        (1, 2, 2, 3, '2024-01-02 10:00:00', '2024-01-02 13:00:00', 3, 'Scheduled', '2024-01-02 00:00:00', '5999-01-01 00:00:00'),
        (1, 3, 3, 4, '2024-01-03 10:00:00', '2024-01-03 14:00:00', 4, 'Scheduled', '2024-01-03 00:00:00', '5999-01-01 00:00:00'),
@@ -201,8 +201,8 @@ VALUES (1, 1, 1, 2, '2024-01-01 10:00:00', '2024-01-01 12:00:00', 2, 'Scheduled'
        (1, 30, 30, 1, '2024-01-31 10:00:00', '2024-01-31 23:59:00', 14, 'Scheduled', '2024-01-31 00:00:00', '5999-01-01 00:00:00');
 
 
-INSERT INTO public."Crew" ("OFFICE_ID", "AIRPLANE_ID", "SHIP_COMMANDER", "SECOND_PILOT", "SENIOR_FLIGHT_ATTENDANT", "FLIGHT_ATTENDANT_1", 
-                            "FLIGHT_ATTENDANT_2", "FLIGHT_ATTENDANT_3", "FLIGHT_ATTENDANT_4") 
+INSERT INTO public.Crew (OFFICE_ID, AIRPLANE_ID, SHIP_COMMANDER, SECOND_PILOT, SENIOR_FLIGHT_ATTENDANT, FLIGHT_ATTENDANT_1, 
+                            FLIGHT_ATTENDANT_2, FLIGHT_ATTENDANT_3, FLIGHT_ATTENDANT_4) 
 VALUES (1, 1, 1, 2, 3, 4, 5, 6, 7),
        (2, 2, 8, 9, 10, 11, 12, 13, 14),
        (3, 3, 15, 16, 17, 18, 19, 20, 21),
@@ -235,7 +235,7 @@ VALUES (1, 1, 1, 2, 3, 4, 5, 6, 7),
        (30, 30, 204, 205, 206, 207, 208, 209, 210);
 
 
-INSERT INTO public."Ticket" ("PASSENGER_ID", "FLIGHT_ID", "PLACE_NUMBER", "SERVICE_CLASS", "TICKET_PRICE", "STATUS_STATUS")
+INSERT INTO public.Ticket (PASSENGER_ID, FLIGHT_ID, PLACE_NUMBER, SERVICE_CLASS, TICKET_PRICE, STATUS_STATUS)
 VALUES (1, 1, '1A', 'Business', '1000', 'Booked'),
        (2, 2, '2B', 'Economy', '500', 'Booked'),
        (3, 3, '3C', 'Business', '1000', 'Booked'),
@@ -268,7 +268,7 @@ VALUES (1, 1, '1A', 'Business', '1000', 'Booked'),
        (30, 30, '30D', 'Economy', '500', 'Booked');
 
 
-INSERT INTO public."Payment" ("PASSENGER_ID", "TICKET_ID", "LOYALTY_CARD_ID", "PAYMENT_AMOUNT", "PAYMENT_METHOD", "PAYMENT_DTTM", "PAYMENT_STATUS")
+INSERT INTO public.Payment (PASSENGER_ID, TICKET_ID, LOYALTY_CARD_ID, PAYMENT_AMOUNT, PAYMENT_METHOD, PAYMENT_DTTM, PAYMENT_STATUS)
 VALUES (1, 1, 1, 1000, 'Credit Card', '2024-01-01 10:00:00', 'Paid'),
        (2, 2, 2, 500, 'Debit Card', '2024-01-02 10:00:00', 'Paid'),
        (3, 3, 3, 1000, 'Credit Card', '2024-01-03 10:00:00', 'Paid'),
